@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 11</title>
+</head>
+<body>
+    <h1>Week 11</h1>
+    <style>
+        .flex {
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+            width: 600px;
+            height: 300px;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            background-color: cornflowerblue;
+            /* justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly; */
+            /* controls the positioning opposite of flex direction */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            /* controls whether child elements are resized are allowed to break onto a new line to respect a fixed width */
+            /* flex-wrap: wrap;
+            flex-wrap: wrap-reverse; */
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-columns: 100px;
+            grid-template-columns: repeat(3, minmax(250px, 1fr));
+            /* fr = fractional space which allows  */
+            grid-template-columns: repeat(3, 1fr);
+
+
+            /* grid-template-columns: 100px 200px 100px;
+            grid-template-columns: 50px auto 50px;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-columns: repeat(6, 200px);
+            grid-template-columns: repeat(3, 100px) auto repeat(2, 200px); */
+
+            grid-template-rows: repeat(3, 100px);
+
+        }
+
+        .box {
+            /* width: 200px; */
+            /* height: 100px; */
+            margin: 10px;
+            background-color: gray;
+            color: white;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box1, #box2, #box3 {
+            flex-grow: 1;
+            /* flex grow expands and fills all the available space 
+            We can also use flex grow on all the elements making them use the whole space*/
+        }
+
+        #box1 {
+            flex-grow: 1;
+            order: 1;
+
+        }
+        #box2 {
+            flex-grow: 1;
+            order: 2;
+
+        }
+        #box4 {
+            transition: transform 2s linear;
+
+
+        }
+
+        
+        #box4:hover {
+          grid-column: 1;
+          /* grid-column: 1 / 4; */
+          grid-row: 1;
+          transform: scale(2);
+          /* transition: transform 4s linear; */
+          animation: ping 2s linear;
+          animation-delay: 1s;
+          animation-iteration-count: 2;
+          animation-iteration-count: infinite;
+          /* animation-fill-mode:forwards;                            */
+          animation-direction: reverse;
+
+        }
+
+        @keyframes ping {
+            0% {
+                transform: scale(1);
+                background-color: orange;
+            }
+            50% {
+                transform: scale(2);
+                background-color: blue;
+            }
+            100% {
+                transform: scale(1.5);
+            }
+
+        }
+
+/* Responsive design (flex, min/max dimensions) 
+Mobile first */
+
+
+        @media screen and (min-width: 800px) {
+            body {
+                background-color: blue;
+            }            
+        }
+
+        @media screen and (min-width: 601px) and (max-width:999) {
+            body {
+                background-color: red;
+            }            
+        }
+        #box5 {
+                  grid-column: 2;
+          grid-row: 2;
+
+        }
+        #box6 {
+            grid-column: 3;
+          grid-row: 3;
+        }
+
+        #box4::after{
+            content: '1';
+            /* color: white; */
+        }
+        #box6::after {
+            content: '3';
+
+        }
+        #box5::after {
+            content: '2';
+
+        }
+    </style>
+
+    <!-- 
+        Flex box 
+        
+        CSS Flexbox is one dimensional (horizontal/rows or vertical/columns)
+        Flex requires a container/parent element to be display: flex
+        
+        
+        Grid is two dimensional (rows and columns at same time)
+        Grid requires a container/parent element to be display: grid
+
+        Both are display types 
+        Both Flexbox and Grid rely on parent element
+
+
+     -->
+
+
+     <!--  -->
+
+     <!-- <div class="flex">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+
+     </div> -->
+
+     <div class="grid">
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+
+     </div>
+    
+</body>
+</html>

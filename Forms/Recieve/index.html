@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="week9.css">
+    <title>Lab 7</title>
+</head>
+<body>
+    <h1>Register for Comp1171</h1>
+    <form action="receive.html" method="get" id="testForm">
+    <p>
+        <label for="username">Username: </label>
+        <input type="text" value="" name="username" id="username" placeholder="example@123.com">
+    </p>
+
+    <p>
+        <label for="password">Password: </label>
+        <input type="password"  
+        name="password" 
+        id="password" 
+        placeholder="must be 8 characters"
+        minlength="8"
+        maxlength="16"
+        >
+    </p>
+
+    <p>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" pattern="">
+    </p>
+
+    <p>
+        <label for="date">Date of birth: </label>
+        <input type="date" name="date" id="date">
+    </p>
+
+
+
+    <p>
+    <label for="Gender">Gender: </label>
+      <select>
+        <option> Options</option>
+        <option value="Male"> Male</option>
+        <option value="Female"> Female</option>
+        <option value="Other"> Other</option>
+      </select>
+    </p>
+
+    <p></p>
+    <label for="consent">Agree to Terms & Conditions: </label>
+    <input type="checkbox" name="consent" id="consent">
+    </p>
+
+    <input type="submit" value="Register">
+</form>
+</bod>
+</html>

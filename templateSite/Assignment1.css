@@ -1,0 +1,63 @@
+body {
+    max-width: 1500px;
+    /* use max width not width */
+    max-width: 80ch;
+    margin: auto;
+    font-size: 125%;
+    /* can also use margin: 0 auto; means top and bottom are zero and sides are auto */
+    background-color: rgb(232, 232, 220);
+
+}
+
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(7, 73, 32);
+    text-align:center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(52, 52, 121);
+    /* text-align: center; */
+}
+
+p {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-indent: 4%;
+}
+
+
+nav ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: black;
+}
+
+a:hover {
+    color:blue;
+    text-decoration: underline;
+}
+
+#CSSSyntax {
+    margin-bottom: 10px;
+}
+
+#Howe {
+    color:blue;
+    text-decoration: underline;
+}
+
+#example {
+    color: rgb(220, 144, 2);
+    font-size: 16px;
+  }

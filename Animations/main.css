@@ -1,0 +1,151 @@
+
+#sun {
+background-color: yellow;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+position: absolute;
+top: 0px;
+z-index: 1;
+}
+
+#sky {
+position: absolute;
+top: 0px;
+bottom: 0px;
+right: 0px;
+left: 0px;
+background-color: blue;
+background-size:cover;
+height: 600px;
+margin: 0px;
+position: absolute;
+}
+
+.star {
+background-color: white;
+opacity: 0%;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+position: absolute;
+top: 0px;
+z-index: 3;
+}
+
+#star1 {
+    position: absolute;
+    left: 150px;
+    top: 75px;
+    animation-delay: 0.6s;
+
+}
+
+#star2 {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    animation-delay: 0.4s;
+}
+
+#star3 {
+    position: absolute;
+    left: 450px;
+    top: 75px;
+    animation-delay: 0.9s;
+}
+
+#star4 {
+    position: absolute;
+    left: 600px;
+    top: 150px;
+}
+
+#star5 {
+    position: absolute;
+    left: 750px;
+    top: 75px;
+    animation-delay: 0.3s;
+
+}
+
+#star6 {
+    position: absolute;
+    left: 900px;
+    top:150px;
+    animation-delay: 1.2s;
+
+}
+
+#star7 {
+    position: absolute;
+    left: 1050px;
+    top: 75px;
+    animation-delay: 0.2s;
+
+}
+
+#star8 {
+    position: absolute;
+    left: 1200px;
+    top: 150px;
+    animation-delay: 0.8s;
+
+}
+
+#star9 {
+    position: absolute;
+    left: 1350px;
+    top: 75px;
+    animation-delay: 1.0s;
+    
+}
+
+#ground {
+    background-color: rgb(87, 231, 87);
+    height: 300px;
+    position: absolute;
+    top: 600px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+#sun:hover { 
+    background-color: lightgray; 
+}
+
+#sun:hover ~ .star { 
+    animation-name: ping;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+}
+
+#sun:hover ~ #sky { 
+    background-color: black; 
+}
+
+#sun:hover ~ #ground { 
+    background-color: darkgreen; 
+}
+
+@keyframes ping {
+    0% {
+        opacity: 0%;
+    }
+    25% {
+        opacity: 75%;
+
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+
+    }
+
+}

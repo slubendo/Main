@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>BCIT</title>
+</head>
+<!-- https://loquacious-truffle-ba761b.netlify.app/ -->
+
+<body>
+    <h1>Welcome to BCIT</h1>
+    <div id="maindiv">
+        <form action="receive.html" method="get" id="testForm">
+    <p>
+        <label for="username" id="username">Username: </label>
+        <input type="text" value="" name="username" id="username" placeholder="Username" required value="" minlength="8">
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" placeholder="Password" required value="">
+    </p>
+    <p>
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" placeholder="a12345678@bcit.com or ca" required value="" pattern="^[a][0-9]{8}[@](bcit.ca|bcit.com)">
+
+        <label for="phone">Number: </label>
+        <input type="tel" class="phone" id="phone" placeholder="Phone Number" required value="" pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}">
+    </p>
+
+    <p>
+        <label for="age">Age: </label>
+        <input type="number" class="age" id="age" placeholder="Min 18" min="18" max="100" required value="">
+    </p>
+
+    <input type="submit" id="submit" value="Register">
+</form>
+</div>
+
+</body>
+</html>
